@@ -1,4 +1,4 @@
-import { toNormal } from '../text';
+import { toNormal } from '../text/index';
 import {
   INDEXER_CHARS_IGNORE,
   INDEXER_CHARS_QUOTE,

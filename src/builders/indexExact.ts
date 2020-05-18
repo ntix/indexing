@@ -1,4 +1,4 @@
-import { toNormal } from '../text/toNormal';
+import { toNormal } from '../text/index';
 import { INDEXER_CHARS_IGNORE } from '../constants/index';
 
 /** index the input exactly
