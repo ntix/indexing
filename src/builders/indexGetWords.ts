@@ -4,7 +4,7 @@ import {
   INDEXER_CHARS_QUOTE,
   INDEXER_CHARS_CAPITAL,
   INDEXER_CHARS_BOUNDARIES,
-} from '../constants';
+} from '../constants/index';
 
 /**
  * Extacts words from the text passed

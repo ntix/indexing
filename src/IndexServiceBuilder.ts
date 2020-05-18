@@ -1,5 +1,5 @@
 import { IIndexTerm } from './IIndexTerm';
-import { TermValuesBuilder } from './builders';
+import { TermValuesBuilder } from './builders/index';
 import { IndexService } from './IndexService';
 
 /** Index service builder */

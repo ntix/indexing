@@ -1,5 +1,5 @@
 import { toNormal } from '../text/toNormal';
-import { INDEXER_CHARS_IGNORE } from '../constants';
+import { INDEXER_CHARS_IGNORE } from '../constants/index';
 
 /** index the input exactly
  *

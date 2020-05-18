@@ -1,7 +1,7 @@
 import { IIndexTerm } from './IIndexTerm';
 import { IIndexSearchOptions } from './IIndexSearchOptions';
 import { IIndexSearchResultItem } from './IIndexSearchResultItem';
-import { indexGetWords } from './builders';
+import { indexGetWords } from './builders/index';
 
 /** index service */
 export class IndexService<T> {

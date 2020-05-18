@@ -1,6 +1,6 @@
 import { IndexService } from './IndexService';
 import { IndexServiceBuilder } from './IndexServiceBuilder';
-import { indexGetWords, indexExact } from './builders';
+import { indexGetWords, indexExact } from './builders/index';
 
 describe('index service', () => {
   const items = [
@@ -78,5 +78,5 @@ describe('index service', () => {
   interface IPerson {
     id: string;
     name: string;
-  }  
+  }
 });
