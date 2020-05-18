@@ -3,7 +3,7 @@ import {
   INDEXER_CHARS_IGNORE,
   INDEXER_CHARS_QUOTE,
   INDEXER_CHARS_CAPITAL,
-  INDEXER_CHARS_WHITESPACE,
+  INDEXER_CHARS_BOUNDARIES,
 } from '../constants';
 
 /**
@@ -44,12 +44,12 @@ export function indexGetWords(text: string): string[] {
     if (!quote) {
       if (is(c, INDEXER_CHARS_IGNORE)) {
         ignore = true;
-      } else if (is(c, INDEXER_CHARS_WHITESPACE)) {
-        if (wordType != null && wordType !== indexWordType.whitespace)
+      } else if (is(c, INDEXER_CHARS_BOUNDARIES)) {
+        if (wordType != null && wordType !== indexWordType.boundary)
           isBreak = true;
 
         ignore = true;
-        nextWordType = indexWordType.whitespace;
+        nextWordType = indexWordType.boundary;
       } else if (is(c, INDEXER_CHARS_CAPITAL)) {
         if (wordType != null && wordType !== indexWordType.textCapitals)
           isBreak = true;
@@ -87,5 +87,5 @@ export function indexGetWords(text: string): string[] {
 export enum indexWordType {
   text,
   textCapitals,
-  whitespace,
+  boundary,
 }

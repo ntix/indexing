@@ -5,4 +5,4 @@
 export * from './INDEXER_CHARS_CAPITAL';
 export * from './INDEXER_CHARS_IGNORE';
 export * from './INDEXER_CHARS_QUOTE';
-export * from './INDEXER_CHARS_WHITESPACE';
+export * from './INDEXER_CHARS_BOUNDARIES';
