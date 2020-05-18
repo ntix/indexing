@@ -1,0 +1,74 @@
+{
+  "name": "@ntix/indexing",
+  "version": "0.0.0-development",
+  "description": "a small text indexer",
+  "repository": {
+    "url": "https://github.com/MrAntix/indexing",
+    "type": "git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean && npm run barrels",
+    "barrels": "barrelsby -q --delete --directory src --include \\.ts$ --exclude \"(\\.spec|this)\\.ts$\" --location all",
+    "build": "ttsc",
+    "build.docs": "typedoc --out docs --mode file src --theme minimal --readme docs.md --media dist",
+    "clean": "shx rm -rf dist",
+    "format": "tslint -c tslint.json 'src/**/*.{ts,tsx}' && prettier --write \"./**/*.{ts,tsx,json}\"",
+    "test": "jest",
+    "test.watch": "jest --watchAll",
+    "start": "npm run build.docs && serve docs",
+    "commit": "git add . && npx git-cz",
+    "semantic-release": "semantic-release"
+  },
+  "engines": {
+    "node": "^10.15"
+  },
+  "keywords": [
+    "indexing",
+    "text"
+  ],
+  "author": "Anthony Johnston <npm@antix.co.uk> (http://antix.co.uk)",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "barrelsby": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "@zoltu/typescript-transformer-append-js-extension": "^1.0.1",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.0.7",
+    "serve": "^11.3.0",
+    "shx": "^0.3.2",
+    "ts-jest": "26.0.0",
+    "tslint": "^6.1.2",
+    "ttypescript": "^1.5.10",
+    "typedoc": "^0.17.7",
+    "typescript": "^3.9.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "verbose": false,
+    "testMatch": [
+      "**/*.spec.ts"
+    ],
+    "moduleNameMapper": {
+      "(.*)\\.js": "$1"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
