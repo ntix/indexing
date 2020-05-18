@@ -2740,11 +2740,11 @@ img {
 		<li class=" tsd-kind-interface tsd-has-type-parameter">
 			<a href="interfaces/iindexterm.html" class="tsd-kind-icon">IIndex<wbr>Term</a>
 		</li>
-		<li class=" tsd-kind-interface">
-			<a href="interfaces/iperson.html" class="tsd-kind-icon">IPerson</a>
-		</li>
 		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 			<a href="globals.html#termvaluesbuilder" class="tsd-kind-icon">Term<wbr>Values<wbr>Builder</a>
+		</li>
+		<li class=" tsd-kind-variable">
+			<a href="globals.html#indexer_chars_boundaries" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>BOUNDARIES</a>
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="globals.html#indexer_chars_capital" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>CAPITAL</a>
@@ -2754,9 +2754,6 @@ img {
 		</li>
 		<li class=" tsd-kind-variable">
 			<a href="globals.html#indexer_chars_quote" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>QUOTE</a>
-		</li>
-		<li class=" tsd-kind-variable">
-			<a href="globals.html#indexer_chars_whitespace" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>WHITESPACE</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#indexexact" class="tsd-kind-icon">index<wbr>Exact</a>
@@ -2806,7 +2803,6 @@ img {
 							<li class="tsd-kind-interface"><a href="interfaces/iindexsearchoptions.html" class="tsd-kind-icon">IIndex<wbr>Search<wbr>Options</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/iindexsearchresultitem.html" class="tsd-kind-icon">IIndex<wbr>Search<wbr>Result<wbr>Item</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/iindexterm.html" class="tsd-kind-icon">IIndex<wbr>Term</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/iperson.html" class="tsd-kind-icon">IPerson</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -2818,10 +2814,10 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Variables</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-variable"><a href="globals.html#indexer_chars_boundaries" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>BOUNDARIES</a></li>
 							<li class="tsd-kind-variable"><a href="globals.html#indexer_chars_capital" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>CAPITAL</a></li>
 							<li class="tsd-kind-variable"><a href="globals.html#indexer_chars_ignore" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>IGNORE</a></li>
 							<li class="tsd-kind-variable"><a href="globals.html#indexer_chars_quote" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>QUOTE</a></li>
-							<li class="tsd-kind-variable"><a href="globals.html#indexer_chars_whitespace" class="tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>WHITESPACE</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -2844,7 +2840,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Term<wbr>Values<wbr>Builder&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/builders/TermValuesBuilder.ts#L9">builders/TermValuesBuilder.ts:9</a></li>
+						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/builders/TermValuesBuilder.ts#L9">builders/TermValuesBuilder.ts:9</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2893,14 +2889,34 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Variables</h2>
 			<section class="tsd-panel tsd-member tsd-kind-variable">
+				<a name="indexer_chars_boundaries" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> INDEXER_<wbr>CHARS_<wbr>BOUNDARIES</h3>
+				<div class="tsd-signature tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>BOUNDARIES<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"!&quot;£$%^&amp;*()_+{}[]:@~;#?,./|¬&#x3D;&lt;&gt;"</span><span class="tsd-signature-symbol"> = &quot;!&quot;£$%^&amp;*()_+{}[]:@~;#?,./|¬&#x3D;&lt;&gt;&quot;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/constants/INDEXER_CHARS_BOUNDARIES.ts#L2">constants/INDEXER_CHARS_BOUNDARIES.ts:2</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>word boundary chars</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="indexer_chars_capital" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> INDEXER_<wbr>CHARS_<wbr>CAPITAL</h3>
 				<div class="tsd-signature tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>CAPITAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span><span class="tsd-signature-symbol"> = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/constants/INDEXER_CHARS_CAPITAL.ts#L1">constants/INDEXER_CHARS_CAPITAL.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/constants/INDEXER_CHARS_CAPITAL.ts#L2">constants/INDEXER_CHARS_CAPITAL.ts:2</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Capital chars</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="indexer_chars_ignore" class="tsd-anchor"></a>
@@ -2908,9 +2924,14 @@ img {
 				<div class="tsd-signature tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>IGNORE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"-&#x27;&#x60;"</span><span class="tsd-signature-symbol"> = &quot;-&#x27;&#x60;&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/constants/INDEXER_CHARS_IGNORE.ts#L1">constants/INDEXER_CHARS_IGNORE.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/constants/INDEXER_CHARS_IGNORE.ts#L2">constants/INDEXER_CHARS_IGNORE.ts:2</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>chars to ignore</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="indexer_chars_quote" class="tsd-anchor"></a>
@@ -2918,19 +2939,14 @@ img {
 				<div class="tsd-signature tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>QUOTE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"&quot;"</span><span class="tsd-signature-symbol"> = &quot;&quot;&quot;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/constants/INDEXER_CHARS_QUOTE.ts#L1">constants/INDEXER_CHARS_QUOTE.ts:1</a></li>
+						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/constants/INDEXER_CHARS_QUOTE.ts#L2">constants/INDEXER_CHARS_QUOTE.ts:2</a></li>
 					</ul>
 				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-variable">
-				<a name="indexer_chars_whitespace" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> INDEXER_<wbr>CHARS_<wbr>WHITESPACE</h3>
-				<div class="tsd-signature tsd-kind-icon">INDEXER_<wbr>CHARS_<wbr>WHITESPACE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"!&quot;£$%^&amp;*()_+{}[]:@~;#?,./|¬&#x3D;&lt;&gt;"</span><span class="tsd-signature-symbol"> = &quot;!&quot;£$%^&amp;*()_+{}[]:@~;#?,./|¬&#x3D;&lt;&gt;&quot;</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/constants/INDEXER_CHARS_WHITESPACE.ts#L1">constants/INDEXER_CHARS_WHITESPACE.ts:1</a></li>
-					</ul>
-				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>quote chars</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
@@ -2945,7 +2961,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/builders/indexExact.ts#L8">builders/indexExact.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/builders/indexExact.ts#L8">builders/indexExact.ts:8</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2976,7 +2992,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/builders/indexGetWords.ts#L15">builders/indexGetWords.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/builders/indexGetWords.ts#L15">builders/indexGetWords.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3007,7 +3023,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/text/normalIndexOf.ts#L9">text/normalIndexOf.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/text/normalIndexOf.ts#L9">text/normalIndexOf.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3044,7 +3060,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/552a5d2/src/text/toNormal.ts#L6">text/toNormal.ts:6</a></li>
+								<li>Defined in <a href="https://github.com/MrAntix/indexing/blob/491f5bd/src/text/toNormal.ts#L6">text/toNormal.ts:6</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

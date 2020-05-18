@@ -74,9 +74,9 @@ describe('index service', () => {
     expect(results[0].item).toBe(items[3]);
     expect(results[1].item).toBe(items[4]);
   });
-});
 
-interface IPerson {
-  id: string;
-  name: string;
-}
+  interface IPerson {
+    id: string;
+    name: string;
+  }  
+});
