@@ -20,6 +20,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - name: npm install, build, test
+      run: |
+        npm i
+        npm run build
+        npm run test
+        
     - name: deploy
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
