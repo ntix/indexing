@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "a small text indexer",
   "repository": {
-    "url": "https://github.com/MrAntix/indexing",
+    "url": "https://github.com/ntix/indexing",
     "type": "git"
   },
   "main": "dist/index.js",
