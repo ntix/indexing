@@ -1,4 +1,4 @@
-import { indexGetWords } from "./builders.js";
+import { indexGetWords } from "./builders/index.js";
 /** index service */
 export class IndexService {
     constructor(terms) {

@@ -5,7 +5,15 @@ import { indexGetWords } from './builders/index';
 
 /** index service */
 export class IndexService<T> {
-  constructor(private terms: IIndexTerm<T>[]) {}
+  private emptyQueryResults: IIndexSearchResultItem<T>[];
+
+  constructor(
+    /** all items */
+    public readonly all: T[],
+    private readonly terms: IIndexTerm<T>[]
+  ) {
+    this.emptyQueryResults = all.map((item) => ({ item, rank: 0 }));
+  }
 
   /** search the index
    *
@@ -15,9 +23,11 @@ export class IndexService<T> {
    * @returns array of item results
    */
   search(
-    query: string,
+    query?: string,
     options?: IIndexSearchOptions
   ): IIndexSearchResultItem<T>[] {
+    if (!query) return options?.queryRequired ? [] : this.emptyQueryResults;
+
     const words = indexGetWords(query);
 
     let all = words.reduce<any[]>((results, word, wordIndex) => {

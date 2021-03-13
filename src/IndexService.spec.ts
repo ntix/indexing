@@ -15,21 +15,33 @@ describe('index service', () => {
   let builder: IndexServiceBuilder<IPerson>;
 
   beforeEach(() => {
-    builder = new IndexServiceBuilder<IPerson>();
-    builder.add((item) => indexGetWords(item.name));
-    builder.add((item) => indexExact(item.id));
-
-    index = builder.build(items);
+    builder = IndexServiceBuilder.create<IPerson>()
+      .add((item) => indexGetWords(item.name))
+      .add((item) => indexExact(item.id));
+    index = builder
+      .build(items);
   });
 
   it('builder handles nulls etc', () => {
     expect(() => builder.add((_) => [null, undefined])).not.toThrow();
   });
 
-  it('finds by name (case insensitive)', () => {
-    const results = index.search('a');
+  it('options.queryRequired default', () => {
+    const results = index.search();
 
-    expect(results.length).toBe(5);
+    expect(results.length).toBe(items.length);
+  });
+
+  it('search results get ranked', () => {
+    const results = index.search('AB');
+
+    expect(results[0].rank).toBe(8.5);
+  });
+
+  it('options.queryRequired true)', () => {
+    const results = index.search(null, { queryRequired: true });
+
+    expect(results.length).toBe(0);
   });
 
   it('finds by id', () => {
