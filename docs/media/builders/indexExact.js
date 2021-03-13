@@ -1,5 +1,5 @@
-import { toNormal } from "../text/toNormal.js";
-import { INDEXER_CHARS_IGNORE } from "../constants.js";
+import { toNormal } from "../text/index.js";
+import { INDEXER_CHARS_IGNORE } from "../constants/index.js";
 /** index the input exactly
  *
  * @param input input to be indexed

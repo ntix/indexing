@@ -1,5 +1,5 @@
-import { toNormal } from "../text.js";
-import { INDEXER_CHARS_IGNORE, INDEXER_CHARS_QUOTE, INDEXER_CHARS_CAPITAL, INDEXER_CHARS_WHITESPACE, } from "../constants.js";
+import { toNormal } from "../text/index.js";
+import { INDEXER_CHARS_IGNORE, INDEXER_CHARS_QUOTE, INDEXER_CHARS_CAPITAL, INDEXER_CHARS_BOUNDARIES, } from "../constants/index.js";
 /**
  * Extacts words from the text passed
  *
@@ -36,11 +36,11 @@ export function indexGetWords(text) {
             if (is(c, INDEXER_CHARS_IGNORE)) {
                 ignore = true;
             }
-            else if (is(c, INDEXER_CHARS_WHITESPACE)) {
-                if (wordType != null && wordType !== indexWordType.whitespace)
+            else if (is(c, INDEXER_CHARS_BOUNDARIES)) {
+                if (wordType != null && wordType !== indexWordType.boundary)
                     isBreak = true;
                 ignore = true;
-                nextWordType = indexWordType.whitespace;
+                nextWordType = indexWordType.boundary;
             }
             else if (is(c, INDEXER_CHARS_CAPITAL)) {
                 if (wordType != null && wordType !== indexWordType.textCapitals)
@@ -71,5 +71,5 @@ export var indexWordType;
 (function (indexWordType) {
     indexWordType[indexWordType["text"] = 0] = "text";
     indexWordType[indexWordType["textCapitals"] = 1] = "textCapitals";
-    indexWordType[indexWordType["whitespace"] = 2] = "whitespace";
+    indexWordType[indexWordType["boundary"] = 2] = "boundary";
 })(indexWordType || (indexWordType = {}));
