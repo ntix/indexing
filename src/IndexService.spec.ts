@@ -87,6 +87,15 @@ describe('index service', () => {
     expect(results[1].item).toBe(items[4]);
   });
 
+  it('build a new index on sub-set', () => {
+
+    const newIndex = index.build(items.slice(0, 2));
+    const results = newIndex.search('c');
+
+    expect(results[0].item).toBe(items[1]);
+    expect(results.length).toBe(1);
+  })
+
   interface IPerson {
     id: string;
     name: string;

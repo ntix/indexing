@@ -35,7 +35,8 @@ export class IndexServiceBuilder<T> {
         });
 
         return terms;
-      }, [])
+      }, []),
+      this
     );
   }
 }

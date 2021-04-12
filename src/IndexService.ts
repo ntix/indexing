@@ -2,6 +2,7 @@ import { IIndexTerm } from './IIndexTerm';
 import { IIndexSearchOptions } from './IIndexSearchOptions';
 import { IIndexSearchResultItem } from './IIndexSearchResultItem';
 import { indexGetWords } from './builders/index';
+import { IndexServiceBuilder } from './IndexServiceBuilder';
 
 /** index service */
 export class IndexService<T> {
@@ -10,7 +11,8 @@ export class IndexService<T> {
   constructor(
     /** all items */
     readonly all: Array<T>,
-    private readonly terms: Array<IIndexTerm<T>>
+    private readonly terms: Array<IIndexTerm<T>>,
+    private readonly builder: IndexServiceBuilder<T>
   ) {
     this.emptyQueryResults = all.map((item) => ({ item, rank: 0 }));
   }
@@ -73,5 +75,14 @@ export class IndexService<T> {
       item: i.item,
       rank: i.rank,
     }));
+  }
+
+  /** Build another service with the same term builders
+   *
+   * @param items items to index
+   */
+  build(items: Array<T>): IndexService<T> {
+
+    return this.builder.build(items);
   }
 }
