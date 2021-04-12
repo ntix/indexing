@@ -6,12 +6,12 @@ import { IndexServiceBuilder } from './IndexServiceBuilder';
 
 /** index service */
 export class IndexService<T> {
-  private emptyQueryResults: Array<IIndexSearchResultItem<T>>;
+  private emptyQueryResults: IIndexSearchResultItem<T>[];
 
   constructor(
     /** all items */
-    readonly all: Array<T>,
-    private readonly terms: Array<IIndexTerm<T>>,
+    readonly all: T[],
+    private readonly terms: IIndexTerm<T>[],
     private readonly builder: IndexServiceBuilder<T>
   ) {
     this.emptyQueryResults = all.map((item) => ({ item, rank: 0 }));
@@ -27,7 +27,7 @@ export class IndexService<T> {
   search(
     query?: string,
     options?: IIndexSearchOptions
-  ): Array<IIndexSearchResultItem<T>> {
+  ): IIndexSearchResultItem<T>[] {
     if (!query) return options?.queryRequired ? [] : this.emptyQueryResults;
 
     const words = indexGetWords(query);
@@ -81,8 +81,7 @@ export class IndexService<T> {
    *
    * @param items items to index
    */
-  build(items: Array<T>): IndexService<T> {
-
+  build(items: T[]): IndexService<T> {
     return this.builder.build(items);
   }
 }

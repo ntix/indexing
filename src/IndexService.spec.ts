@@ -18,8 +18,7 @@ describe('index service', () => {
     builder = IndexServiceBuilder.create<IPerson>()
       .add((item) => indexGetWords(item.name))
       .add((item) => indexExact(item.id));
-    index = builder
-      .build(items);
+    index = builder.build(items);
   });
 
   it('builder handles nulls etc', () => {
@@ -88,13 +87,12 @@ describe('index service', () => {
   });
 
   it('build a new index on sub-set', () => {
-
     const newIndex = index.build(items.slice(0, 2));
     const results = newIndex.search('c');
 
     expect(results[0].item).toBe(items[1]);
     expect(results.length).toBe(1);
-  })
+  });
 
   interface IPerson {
     id: string;

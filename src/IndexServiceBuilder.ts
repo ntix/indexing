@@ -18,10 +18,10 @@ export class IndexServiceBuilder<T> {
   }
 
   /** build index on items passed using added builders */
-  build(items: Array<T>): IndexService<T> {
+  build(items: T[]): IndexService<T> {
     return new IndexService<T>(
       items,
-      items.reduce<Array<IIndexTerm<T>>>((terms, item) => {
+      items.reduce<IIndexTerm<T>[]>((terms, item) => {
         this.termBuilders.forEach((indexer) => {
           terms = terms.concat(
             indexer(item)
