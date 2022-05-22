@@ -1,4 +1,4 @@
-import { toNormal } from "./toNormal.js";
+import { toNormal } from './toNormal';
 /**
  * Gets the index of the text ignoring diacritics
  *

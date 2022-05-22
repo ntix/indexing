@@ -1,5 +1,5 @@
-import { toNormal } from "../text/index.js";
-import { INDEXER_CHARS_IGNORE, INDEXER_CHARS_QUOTE, INDEXER_CHARS_CAPITAL, INDEXER_CHARS_BOUNDARIES, } from "../constants/index.js";
+import { toNormal } from '../text/index';
+import { INDEXER_CHARS_IGNORE, INDEXER_CHARS_QUOTE, INDEXER_CHARS_CAPITAL, INDEXER_CHARS_BOUNDARIES, } from '../constants/index';
 /**
  * Extacts words from the text passed
  *

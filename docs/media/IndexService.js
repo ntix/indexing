@@ -1,8 +1,13 @@
-import { indexGetWords } from "./builders/index.js";
+import { indexGetWords } from './builders/index';
 /** index service */
 export class IndexService {
-    constructor(terms) {
+    constructor(
+    /** all items */
+    all, terms, builder) {
+        this.all = all;
         this.terms = terms;
+        this.builder = builder;
+        this.emptyQueryResults = all.map((item) => ({ item, rank: 0 }));
     }
     /** search the index
      *
@@ -12,6 +17,8 @@ export class IndexService {
      * @returns array of item results
      */
     search(query, options) {
+        if (!query)
+            return (options === null || options === void 0 ? void 0 : options.queryRequired) ? [] : this.emptyQueryResults;
         const words = indexGetWords(query);
         let all = words.reduce((results, word, wordIndex) => {
             this.terms.forEach((term) => {
@@ -48,5 +55,12 @@ export class IndexService {
             item: i.item,
             rank: i.rank,
         }));
+    }
+    /** Build another service with the same term builders
+     *
+     * @param items items to index
+     */
+    build(items) {
+        return this.builder.build(items);
     }
 }
