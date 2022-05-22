@@ -3,7 +3,8 @@
   "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
-    "array-type": [true, "array"]
+    "array-type": [true, "array"],
+    "quotes": ["error", "single"]
   },
   "rulesDirectory": []
 }
