@@ -1,6 +1,6 @@
 {
   "name": "@ntix/indexing",
-  "version": "3.0.0",
+  "version": "0.0.0-development",
   "description": "a small text indexer",
   "repository": {
     "url": "https://github.com/ntix/indexing",
