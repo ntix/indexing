@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/ntix/indexing/compare/v3.0.0...v3.0.1) (2022-10-23)
+
+
+### Bug Fixes
+
+* **docs:** bump moved to github packages ([1aaedd7](https://github.com/ntix/indexing/commit/1aaedd7dc3677e4078e5b0a9aebc033dff196848))
+
 # [3.0.0](https://github.com/ntix/indexing/compare/v2.0.0...v3.0.0) (2022-10-23)
 
 
