@@ -13,7 +13,7 @@ export default {
     },
   ],
   watch: {
-    include: 'src/**',
+    include: ['src/**'],
   },
   plugins: [
     typescript({
