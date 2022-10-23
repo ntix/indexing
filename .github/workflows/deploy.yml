@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: 18
         registry-url: https://npm.pkg.github.com/
-
+        persist-credentials: false
     - name: npm install, build, test
       run: |
         npm i
