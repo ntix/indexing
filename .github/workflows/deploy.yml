@@ -5,9 +5,6 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-      NPM_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
 
     steps:
 
@@ -27,3 +24,6 @@ jobs:
         
     - name: deploy
       run: npx semantic-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        NPM_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
