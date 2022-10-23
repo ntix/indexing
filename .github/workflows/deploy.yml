@@ -2,17 +2,19 @@ name: Deploy
 
 on: workflow_dispatch
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+permissions:
+  contents: write
+  packages: write
+  issues: read
+  
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    permissions:
-      contents: write
-      packages: write
-      issues: read
 
     steps:
 
@@ -21,7 +23,6 @@ jobs:
       with:
         node-version: 18
         registry-url: https://npm.pkg.github.com/
-        persist-credentials: false
     - name: npm install, build, test
       run: |
         npm i
