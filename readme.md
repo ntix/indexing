@@ -4,9 +4,9 @@ A small text indexer
 
 from 3.0.1 moved to github packages
 
-![CI](https://github.com/ntix/indexing/workflows/CI/badge.svg?branch=main)
+[![Build](https://github.com/ntix/indexing/actions/workflows/build.yml/badge.svg)](https://github.com/ntix/indexing/actions/workflows/build.yml)
+[![Deploy](https://github.com/ntix/indexing/actions/workflows/deploy.yml/badge.svg)](https://github.com/ntix/indexing/actions/workflows/deploy.yml)
 [![Known Vulnerabilities](https://snyk.io/test/github/ntix/indexing/badge.svg)](https://snyk.io/test/github/ntix/indexing)
-[![npm version](https://badge.fury.io/js/%40ntix%2Findexing.svg)](https://badge.fury.io/js/%40ntix%2Findexing)
 
 [Documentation](https://ntix.github.io/indexing/)
 
