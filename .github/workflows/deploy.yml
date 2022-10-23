@@ -5,12 +5,17 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      issues: read        
 
     steps:
 
     - uses: actions/checkout@v3
       with:
         persist-credentials: false
+        
     - uses: actions/setup-node@v3
       with:
         node-version: 18
