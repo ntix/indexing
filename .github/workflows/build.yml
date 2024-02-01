@@ -1,17 +1,17 @@
 name: Build
 
 on:
-  pull_request_review:
-    types: [submitted]
+  pull_request:
+    types: [opened, synchronize]
     
 jobs:
   build:
-    if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+        
     - name: npm install, build, test
       run: |
         npm i
