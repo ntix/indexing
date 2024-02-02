@@ -8,7 +8,7 @@ export default {
     {
       file: pkg.main,
       format: 'umd',
-      name: 'validating',
+      name: 'indexing',
       sourcemap: true,
     },
   ],
