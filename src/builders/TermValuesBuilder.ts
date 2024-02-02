@@ -6,4 +6,4 @@
  *
  * @returns array of term values to add to the index
  */
-export type TermValuesBuilder<T> = (item: T) => any[];
+export type TermValuesBuilder<T> = (item: T) => (string | null | undefined)[];

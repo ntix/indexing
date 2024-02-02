@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "barrels": "barrelsby -q --delete --directory src --include \\.ts$ --exclude \"(\\.spec|this)\\.ts$\" --location all",
-    "prebuild": "npm run clean && npm run barrels",
+    "prebuild": "npm run clean && npm run barrels && npm run format",
     "build": "rollup -c rollup.config.ts --configPlugin typescript",
     "build.docs": "npm run build && typedoc --exclude \"**/*+(index|.spec|.e2e).ts\" --out docs src --readme docs.md --media dist",
     "clean": "shx rm -rf dist",
