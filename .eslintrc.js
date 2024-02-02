@@ -1,4 +1,5 @@
 module.exports = {
+  env: { node: true, browser: true },
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -23,5 +24,5 @@ module.exports = {
     "no-empty-interface": "off",
     "no-unused-vars": "off",
   },
-  root: true,
+  root: true
 };
