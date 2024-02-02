@@ -24,6 +24,7 @@
     "format": "eslint src --fix",
     "pretest": "npm run barrels",
     "test": "jest",
+    "test.coverage": "jest --coverage",
     "test.debug": "jest --runInBand",
     "test.watch": "jest --watchAll",
     "start": "npm run build.docs && serve docs",
@@ -63,7 +64,22 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "verbose": false,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/index.ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "collectCoverage": true,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
     "testMatch": [
       "**/*.spec.ts"
     ],
