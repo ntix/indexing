@@ -2,5 +2,9 @@
   "compilerOptions": {
     "declaration": true
   },
-  "extends": "./tsconfig.json"
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }
