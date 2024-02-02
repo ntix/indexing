@@ -29,7 +29,7 @@ export class IndexServiceBuilder<T> {
               .map((value, distance) => ({
                 value,
                 distance,
-                item,
+                item
               }))
           );
         });

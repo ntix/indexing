@@ -10,7 +10,7 @@ describe('base index of', () => {
     { a: 'äb d', b: ' D', expected: 2 },
     { a: 'äbcd', b: 'E', expected: -1 },
     { a: 'äbcd', b: 'de', expected: -1 },
-    { a: ' äbcde ab', b: ' e', expected: -1 },
+    { a: ' äbcde ab', b: ' e', expected: -1 }
   ].forEach(({ a, b, expected }) => {
     it(`indexOf ${b} in ${a} is ${expected}`, () => {
       expect(normalIndexOf(a, b)).toBe(expected);

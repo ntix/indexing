@@ -1,10 +1,11 @@
 import { toNormal } from '../text/index';
 import {
-  INDEXER_CHARS_IGNORE,
-  INDEXER_CHARS_QUOTE,
-  INDEXER_CHARS_CAPITAL,
   INDEXER_CHARS_BOUNDARIES,
+  INDEXER_CHARS_CAPITAL,
+  INDEXER_CHARS_IGNORE,
+  INDEXER_CHARS_QUOTE
 } from '../constants/index';
+import { indexWordType } from './indexWordType';
 
 /**
  * Extacts words from the text passed
@@ -82,10 +83,4 @@ export function indexGetWords(text: string): string[] {
   }
 
   return words;
-}
-
-export enum indexWordType {
-  text,
-  textCapitals,
-  boundary,
 }

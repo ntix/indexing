@@ -4,4 +4,5 @@
 
 export * from './indexExact';
 export * from './indexGetWords';
+export * from './indexWordType';
 export * from './TermValuesBuilder';

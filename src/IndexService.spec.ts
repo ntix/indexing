@@ -1,15 +1,15 @@
 import { IndexService } from './IndexService';
 import { IndexServiceBuilder } from './IndexServiceBuilder';
-import { indexGetWords, indexExact } from './builders/index';
+import { indexExact, indexGetWords } from './builders/index';
 
 describe('index service', () => {
   const items = [
     { id: '0-0', name: 'Aa Bb' },
-    { id: '1-1', name: "Ab C-c's" },
+    { id: '1-1', name: 'Ab C-c\'s' },
     { id: '2-2', name: 'Bb Aa' },
     { id: '3-3', name: 'Cc Aa DD' },
     { id: '4-4', name: 'Cc Ca "DD"' },
-    { id: '5-5', name: 'ABC' },
+    { id: '5-5', name: 'ABC' }
   ];
   let index: IndexService<IPerson>;
   let builder: IndexServiceBuilder<IPerson>;

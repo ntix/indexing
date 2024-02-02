@@ -5,7 +5,7 @@ import { INDEXER_CHARS_IGNORE } from '../constants/index';
  *
  * @param input input to be indexed
  */
-export function indexExact(input: any): string[] {
+export function indexExact(input: unknown): string[] {
   if (!input) return [];
 
   return [
@@ -15,6 +15,6 @@ export function indexExact(input: any): string[] {
           INDEXER_CHARS_IGNORE.includes(c) ? s : [...s, c.toLowerCase()],
         []
       )
-      .join(''),
+      .join('')
   ];
 }
