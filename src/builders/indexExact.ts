@@ -12,7 +12,9 @@ export function indexExact(input: unknown): string[] {
     Array.from(toNormal(`${input}`))
       .reduce(
         (s, c) =>
-          INDEXER_CHARS_IGNORE.includes(c) ? s : [...s, c.toLowerCase()],
+          INDEXER_CHARS_IGNORE.includes(c)
+            ? s
+            : [...s, c.toLowerCase()],
         []
       )
       .join('')

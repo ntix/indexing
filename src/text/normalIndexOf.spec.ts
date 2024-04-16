@@ -2,6 +2,8 @@ import { normalIndexOf } from './normalIndexOf';
 
 describe('base index of', () => {
   [
+    { a: '', b: 'bc', expected: -1 },
+    { a: 'abcd', b: '', expected: -1 },
     { a: 'abcd', b: 'bc', expected: 1 },
     { a: 'abcd', b: 'd', expected: 3 },
     { a: 'abcd', b: 'ä', expected: 0 },
