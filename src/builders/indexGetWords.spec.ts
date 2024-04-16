@@ -2,6 +2,7 @@ import { indexGetWords } from './indexGetWords';
 
 describe('indexGetWords', () => {
   [
+    { words: '', expected: [] },
     { words: 'a b', expected: ['a', 'b'] },
     { words: 'á b', expected: ['a', 'b'] },
     { words: 'A B', expected: ['a', 'b'] },
