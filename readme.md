@@ -4,9 +4,9 @@ A small text indexer
 
 from 3.0.1 moved to github packages
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1a87c55f9eb644488095b31b223676a6)](https://app.codacy.com/gh/ntix/indexing?utm_source=github.com&utm_medium=referral&utm_content=ntix/indexing&utm_campaign=Badge_Grade)
 [![Build](https://github.com/ntix/indexing/actions/workflows/build.yml/badge.svg)](https://github.com/ntix/indexing/actions/workflows/build.yml)
-[![Known Vulnerabilities](https://snyk.io/test/github/ntix/indexing/badge.svg)](https://snyk.io/test/github/ntix/indexing)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1a87c55f9eb644488095b31b223676a6)](https://app.codacy.com/gh/ntix/indexing?utm_source=github.com&utm_medium=referral&utm_content=ntix/indexing&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/c5d087874caf417c9e38073ee9770fc2)](https://app.codacy.com/gh/ntix/indexing/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)[![Known Vulnerabilities](https://snyk.io/test/github/ntix/indexing/badge.svg)](https://snyk.io/test/github/ntix/indexing)
 ![Deploy](https://github.com/ntix/indexing/actions/workflows/deploy.yml/badge.svg)
 
 [Documentation](https://ntix.github.io/indexing/)
