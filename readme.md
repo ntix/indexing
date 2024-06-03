@@ -45,4 +45,4 @@ from 3.0.1 moved to github packages
 
 ```
 
-See tests for more examples of usage
+See tests for more examples of usage.
