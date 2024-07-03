@@ -42,13 +42,13 @@
   "author": "Anthony Johnston <npm@antix.co.uk> (http://antix.co.uk)",
   "license": "MIT",
   "devDependencies": {
-    "@antfu/eslint-config": "^2.20.0",
+    "@antfu/eslint-config": "^2.21.2",
     "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/jest": "^29.5.12",
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
     "barrelsby": "^2.8.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
@@ -58,9 +58,9 @@
     "semantic-release": "^24.0.0",
     "serve": "^14.2.3",
     "shx": "^0.3.4",
-    "ts-jest": "^29.1.4",
-    "typedoc": "^0.25.13",
-    "typescript": "^5.4.5"
+    "ts-jest": "^29.1.5",
+    "typedoc": "^0.26.3",
+    "typescript": "^5.5.3"
   },
   "jest": {
     "preset": "ts-jest",
