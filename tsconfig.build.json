@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "declaration": true
+    "declaration": true,
   },
   "extends": "./tsconfig.json",
   "exclude": [

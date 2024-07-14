@@ -10,7 +10,7 @@ export function indexExact(input: unknown): string[] {
 
   return [
     Array.from(toNormal(`${input}`))
-      .reduce(
+      .reduce<string[]>(
         (s, c) =>
           INDEXER_CHARS_IGNORE.includes(c)
             ? s
