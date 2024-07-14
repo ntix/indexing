@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "strict": true,
     "lib": [
       "dom",
-      "es2017"
+      "es2018"
     ],
     "moduleResolution": "node",
     "module": "esnext",
@@ -16,10 +17,11 @@
     "experimentalDecorators": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
   ],
   "exclude": [
     "src/**/*.spec.ts",
