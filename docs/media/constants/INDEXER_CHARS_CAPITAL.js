@@ -1,2 +1,0 @@
-/** Capital chars */
-export const INDEXER_CHARS_CAPITAL = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
