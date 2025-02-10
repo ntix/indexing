@@ -42,7 +42,7 @@
   "author": "Anthony Johnston <npm@antix.co.uk> (http://antix.co.uk)",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/jest": "^29.5.12",
