@@ -43,12 +43,12 @@
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.3.0",
-    "@rollup/wasm-node": "^4.53.3",
+    "@rollup/wasm-node": "^4.55.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/jest": "^30.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.49.0",
-    "@typescript-eslint/parser": "^8.49.0",
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
     "barrelsby": "^2.8.1",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
@@ -58,7 +58,7 @@
     "serve": "^14.2.5",
     "shx": "^0.4.0",
     "ts-jest": "^29.4.6",
-    "typedoc": "^0.28.15",
+    "typedoc": "^0.28.16",
     "typescript": "^5.9.3"
   },
   "jest": {
