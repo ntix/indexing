@@ -1,20 +1,28 @@
 name: Coverage
 
-on: ["push"]
+on:
+  pull_request_target:
 
 jobs:
-  codacy-coverage-reporter:
+  coverage:
     runs-on: ubuntu-latest
-    name: codacy-coverage-reporter
+    permissions:
+      pull-requests: write
+      contents: read
+      checks: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-        
+          node-version: "20"
+          cache: "npm"
+
       - name: npm install, build, test
         run: |
-          npm ci
+          npm i
           npm run test.coverage
 
       - name: Run codacy-coverage-reporter
